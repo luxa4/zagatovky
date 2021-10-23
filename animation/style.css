@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(55, 55, 55, 1);
+    font-family: 'Montserrat';
+    overflow: hidden;
+}
+
+img {
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.down {
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.up {
+    opacity: 1;
+    transition: opacity 3s linear;
+}
+
+.btn {
+    font-size: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 0px;
+    color: #fff;
+    /*box-shadow: 0 0 3px 3px #03d8fb;*/
+
+    user-select: none;
+    /*background: #f6f6f4;*/
+    border-radius: 10px;
+    text-transform: uppercase;
+
+}
+
+@keyframes flicker1 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+                0 0 4px #fff,
+                0 0 11px #fff,
+                0 0 19px #fff,
+                0 0 40px #1ec9c9,
+                0 0 80px #1ec9c9,
+                0 0 90px #1ec9c9,
+                0 0 100px #1ec9c9,
+                0 0 150px #1ec9c9;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes flicker2 {
+    0%, 11%, 20%, 28%, 63%, 74%, 100% {
+        text-shadow:
+                0 0 4px #fff,
+                0 0 11px #fff,
+                0 0 19px #fff,
+                0 0 40px #1ec9c9,
+                0 0 80px #1ec9c9,
+                0 0 90px #1ec9c9,
+                0 0 100px #1ec9c9,
+                0 0 150px #1ec9c9;
+    }
+    25%, 60%, 70% {
+        text-shadow: none;
+    }
+}
+
+@keyframes flicker3 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+                0 0 4px #fff,
+                0 0 11px #fff,
+                0 0 19px #fff,
+                0 0 40px #1ec9c9,
+                0 0 80px #1ec9c9,
+                0 0 90px #1ec9c9,
+                0 0 100px #1ec9c9,
+                0 0 150px #1ec9c9;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes ag {
+    0% {margin-left: 0px}
+    25% {margin-left: -400px}
+    50% {margin-left: 0px}
+    75% {margin-left: 400px}
+    100% {margin-left: 0px}
+}
+
+.btn:hover {
+    /*box-shadow: 0 0 15px 6px #03d8fb;*/
+    transition: box-shadow .2s ease-in;
+}
+
+.a1 {
+    animation: flicker1 1.5s infinite alternate;
+}
+
+.a2 {
+    animation: flicker2 1.5s infinite alternate;
+}
+
+.a3 {
+    animation: flicker3 1.5s infinite alternate 0.8s;
+}
+
+.together {
+    width: 176px;
+    height: 53px;
+    letter-spacing: 3px !important;
+    transition: letter-spacing 5s ease-out;
+}
