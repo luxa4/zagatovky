@@ -10,9 +10,12 @@ function start() {
     //         img.classList.remove('up');
     //         img.classList.add('down');
     //     }
-    // }, 2000)
+    // }, 5000)
 
     const btn = document.querySelector('.btn');
+    btn.addEventListener('click', () => {
+        btn.classList.add('down');
+    });
     const width = document.body.clientWidth;
     console.log(width)
     btn.style.letterSpacing = `${width + 10}px`;
