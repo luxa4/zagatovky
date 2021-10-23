@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(55, 55, 55, 1);
+    font-family: 'Montserrat';
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    margin: 70px auto;
+}
+
+.slide {
+    position: relative;
+    border-radius: 10px;
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: flex 0.5s ease-out;
+}
+
+.slide.active {
+    flex: 10;
+}
+
+.slide h3 {
+    position: absolute;
+    bottom: 28px;
+    left: 30px;
+    font-size: 30px;
+    color: azure;
+    opacity: 0;
+}
+
+.slide.active h3 {
+    position: absolute;
+    bottom: 28px;
+    left: 30px;
+    font-size: 30px;
+    color: azure;
+    opacity: 1;
+    transition: opacity 0.2s ease-out 0.4s;
+}
