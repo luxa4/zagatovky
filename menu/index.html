@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="menu">
+    <ul>
+        <li class="list active">
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="airplane-outline"></ion-icon>
+                </span>
+                <span class="text">Fly</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="bicycle-outline"></ion-icon>
+                </span>
+                <span class="text">Bicycle</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="basketball-outline"></ion-icon>
+                </span>
+                <span class="text">Sport</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="beer-outline"></ion-icon>
+                </span>
+                <span class="text">Relax</span>
+            </a>
+        </li>
+        <div class="indicator">
+
+        </div>
+    </ul>
+</div>
+
+<script>
+    let lists = document.querySelectorAll('.list');
+    function setActiveClass() {
+        lists.forEach( item => {
+            item.classList.remove('active');
+            this.classList.add('active');
+        })
+    }
+    lists.forEach(item => {
+        item.addEventListener('mouseover', setActiveClass);
+    })
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
